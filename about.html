@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MONO | About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ["Space Mono", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+      * {
+        font-family: "Space Mono", monospace;
+      }
+
+      .noise-bg {
+        position: relative;
+      }
+
+      .noise-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.05;
+        z-index: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      .gradient-text {
+        background: linear-gradient(to right, #000, #777);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-black min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full px-4 py-3 flex justify-between items-center z-50 bg-white border-b border-gray-900"
+    >
+      <a href="index.html" class="text-xl font-bold tracking-normal">MONO</a>
+      <div class="flex gap-6">
+        <a
+          href="typography.html"
+          class="text-sm hover:underline decoration-4 underline-offset-8"
+          >TYPOGRAPHY</a
+        >
+        <a
+          href="layout.html"
+          class="text-sm hover:underline decoration-4 underline-offset-8"
+          >LAYOUT</a
+        >
+        <a
+          href="gallery.html"
+          class="text-sm hover:underline decoration-4 underline-offset-8"
+          >GALLERY</a
+        >
+        <a
+          href="about.html"
+          class="text-sm underline decoration-4 underline-offset-8"
+          >ABOUT</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+      class="h-screen flex flex-col justify-center items-center pt-16 relative overflow-hidden"
+    >
+      <div class="z-10 px-8 max-w-4xl text-center">
+        <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-none">
+          AB<span class="text-xs align-super">OUT</span>
+        </h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto">
+          The philosophy of constraint-driven design.
+        </p>
+      </div>
+    </header>
+
+    <!-- Manifesto Section -->
+    <section class="py-24 px-8 bg-black text-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-5xl font-bold mb-16">
+          MANI<span class="text-xs align-super">FESTO</span>
+        </h2>
+
+        <div class="space-y-8 text-lg">
+          <p>
+            MONO is an exploration of design within constraints. By limiting our
+            palette to black, white, and the shades between, we focus on the
+            fundamental elements of design: typography, layout, and form.
+          </p>
+
+          <p>
+            This monochromatic approach isn't about limitation—it's about
+            clarity. It strips away the distractions and reveals the skeleton of
+            good design. What works in black and white works anywhere.
+          </p>
+
+          <p>
+            A single font, used with intention, can express the full range of
+            human emotion and thought.
+          </p>
+
+          <blockquote class="border-l-4 border-white pl-6 my-12 italic">
+            "Perfection is achieved not when there is nothing more to add, but
+            when there is nothing left to take away."
+            <footer class="mt-2 text-base">— Antoine de Saint-Exupéry</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-24 px-8 noise-bg">
+      <div class="max-w-6xl mx-auto relative z-10">
+        <h2 class="text-5xl font-bold mb-16">
+          PRO<span class="text-xs align-super">CESS</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div>
+            <h3 class="text-3xl font-bold mb-6">Reduction</h3>
+            <p class="text-lg mb-4">
+              We begin by stripping away everything that isn't essential. Color,
+              decoration, and complexity are removed, leaving only the core
+              elements.
+            </p>
+            <div
+              class="h-64 border-2 border-black p-8 flex items-center justify-center mt-8"
+            >
+              <div class="w-32 h-32 bg-black"></div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-3xl font-bold mb-6">Refinement</h3>
+            <p class="text-lg mb-4">
+              Once reduced to its essence, refine the remaining
+              elements—typography, spacing, proportion—until they achieve
+              harmony and balance.
+            </p>
+            <div
+              class="h-64 border-2 border-black p-8 flex items-center justify-center mt-8"
+            >
+              <div class="w-32 h-32 bg-black rounded-full"></div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-3xl font-bold mb-6">Rhythm</h3>
+            <p class="text-lg mb-4">
+              Design creates rhythm through repetition and variation. Even with
+              limited elements, we can create complex patterns and
+              relationships.
+            </p>
+            <div
+              class="h-64 border-2 border-black p-8 flex items-center justify-center mt-8"
+            >
+              <div class="grid grid-cols-3 gap-2">
+                <div class="w-8 h-8 bg-black"></div>
+                <div class="w-8 h-8 bg-gray-700"></div>
+                <div class="w-8 h-8 bg-gray-500"></div>
+                <div class="w-8 h-8 bg-gray-300"></div>
+                <div class="w-8 h-8 bg-gray-200"></div>
+                <div class="w-8 h-8 bg-gray-100"></div>
+                <div class="w-8 h-8 border border-black"></div>
+                <div class="w-8 h-8 border border-gray-500"></div>
+                <div class="w-8 h-8 border border-gray-300"></div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-3xl font-bold mb-6">Reaction</h3>
+            <p class="text-lg mb-4">
+              The final step is to observe how people interact with the design.
+              Does it communicate clearly? Does it evoke the intended response?
+            </p>
+            <div
+              class="h-64 border-2 border-black p-8 flex items-center justify-center mt-8"
+            >
+              <div class="text-6xl font-bold gradient-text">YES</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-8 bg-gray-100">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-5xl font-bold mb-16">
+          FA<span class="text-xs align-super">Q</span>
+        </h2>
+
+        <div class="space-y-12">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Why monochrome?</h3>
+            <p class="text-lg">
+              Monochrome design forces us to focus on composition, typography,
+              and form. By removing color as a variable, we can more clearly
+              evaluate the effectiveness of these fundamental elements.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold mb-4">
+              Can this approach work for complex interfaces?
+            </h3>
+            <p class="text-lg">
+              Absolutely. In fact, designing complex interfaces in monochrome
+              first ensures they have a strong foundational structure. Color can
+              then be applied strategically to enhance hierarchy and usability.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold mb-4">
+              Is this just minimalism rebranded?
+            </h3>
+            <p class="text-lg">
+              While there's overlap with minimalist principles, MONO is more
+              focused on the expressive potential within constraints rather than
+              reduction for its own sake. We embrace complexity within our
+              monochromatic framework.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Do you ever use color?</h3>
+            <p class="text-lg">
+              Use black, white, and the full spectrum of grays. That's the color
+              palette. This discipline helps us understand how design elements
+              interact without relying on chromatic differentiation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-8 border-t border-gray-400 dark:border-gray-600">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div>
+          <a
+            href="https://layogtima.com"
+            target="_blank"
+            class="text-xl font-bold tracking-normal"
+          >
+            AMIT
+          </a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div
+            class="text-xs text-gray-600 dark:text-gray-400 flex items-center gap-2"
+          >
+            <span class="inline-block transform rotate-180 text-lg mb-2"
+              >©</span
+            >
+            <span
+              >Copyleft 2025 -
+              <a
+                href="https://github.com/layogtima/mono"
+                target="_blank"
+                class="underline"
+                >Share, Adapt, Build.</a
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

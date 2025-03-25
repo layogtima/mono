@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MONO | Typography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ["Space Mono", "monospace"],
+            },
+            animation: {
+              "text-slide": "text-slide 12s linear infinite",
+              "pulse-slow": "pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+            },
+            keyframes: {
+              "text-slide": {
+                "0%, 100%": { transform: "translateX(0%)" },
+                "50%": { transform: "translateX(-20%)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+      * {
+        font-family: "Space Mono", monospace;
+      }
+
+      .text-shadow {
+        text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      .hover-text-stroke:hover {
+        -webkit-text-stroke: 1px black;
+        -webkit-text-fill-color: white;
+      }
+
+      .text-stroke {
+        -webkit-text-stroke: 1px black;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .noisy-bg {
+        position: relative;
+      }
+
+      .noisy-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        z-index: -1;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+    </style>
+  </head>
+  <body class="bg-white text-black min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full px-4 py-3 flex justify-between items-center z-50 bg-white border-b border-gray-900"
+    >
+      <a href="index.html" class="text-xl font-bold tracking-normal">MONO</a>
+      <div class="flex gap-6">
+        <a
+          href="typography.html"
+          class="text-sm underline decoration-4 underline-offset-8"
+          >TYPOGRAPHY</a
+        >
+        <a
+          href="layout.html"
+          class="text-sm hover:underline decoration-4 underline-offset-8"
+          >LAYOUT</a
+        >
+        <a
+          href="gallery.html"
+          class="text-sm hover:underline decoration-4 underline-offset-8"
+          >GALLERY</a
+        >
+        <a
+          href="about.html"
+          class="text-sm hover:underline decoration-4 underline-offset-8"
+          >ABOUT</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+      class="h-screen flex flex-col justify-center items-center pt-16 relative overflow-hidden bg-black text-white"
+    >
+      <div class="z-10 px-8 max-w-4xl text-center">
+        <h1
+          class="text-6xl md:text-8xl font-bold mb-6 leading-none tracking-tighter"
+        >
+          TYPO<span class="text-xs align-super tracking-normal">GRAPHY</span>
+        </h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto">
+          Single font. Infinite expressions.
+        </p>
+      </div>
+    </header>
+
+    <!-- Typography Showcase -->
+    <section class="py-24 px-8">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-5xl font-bold mb-16">
+          SIZE<span class="text-xs align-super"> MATTERS</span>
+        </h2>
+
+        <div class="grid grid-cols-1 gap-12">
+          <!-- Size Exploration -->
+          <div class="py-12 border-t border-b border-gray-300 overflow-hidden">
+            <div class="space-y-6">
+              <div class="text-9xl font-bold tracking-tighter">MASSIVE</div>
+              <div class="text-7xl tracking-tight">LARGE</div>
+              <div class="text-5xl">MEDIUM</div>
+              <div class="text-3xl">REGULAR</div>
+              <div class="text-xl">SMALL</div>
+              <div class="text-sm">TINY</div>
+              <div class="text-xs uppercase tracking-widest">Microscopic</div>
+            </div>
+          </div>
+
+          <!-- Weight Exploration -->
+          <div class="py-12 border-b border-gray-300">
+            <h3 class="text-2xl mb-8">
+              WEIGHT<span class="text-xs align-super"> COMPARISON</span>
+            </h3>
+            <div class="space-y-6">
+              <div class="text-5xl font-bold">BOLD STATEMENT</div>
+              <div class="text-5xl font-normal">NORMAL ASSERTION</div>
+              <div class="text-5xl font-light">LIGHT SUGGESTION</div>
+              <div class="text-5xl text-gray-400">FADED WHISPER</div>
+            </div>
+          </div>
+
+          <!-- Spacing Exploration -->
+          <div class="py-12 border-b border-gray-300">
+            <h3 class="text-2xl mb-8">
+              SPACING<span class="text-xs align-super"> EXPLORATION</span>
+            </h3>
+            <div class="space-y-6">
+              <div class="text-4xl tracking-tighter">TRACKING TIGHTER</div>
+              <div class="text-4xl tracking-tight">TRACKING TIGHT</div>
+              <div class="text-4xl tracking-normal">TRACKING NORMAL</div>
+              <div class="text-4xl tracking-wide">TRACKING WIDE</div>
+              <div class="text-4xl tracking-wider">TRACKING WIDER</div>
+              <div class="text-4xl tracking-widest">TRACKING WIDEST</div>
+            </div>
+          </div>
+
+          <!-- Style Exploration -->
+          <div class="py-12 border-b border-gray-300">
+            <h3 class="text-2xl mb-8">
+              STYLE<span class="text-xs align-super"> VARIATIONS</span>
+            </h3>
+            <div class="space-y-6">
+              <div class="text-4xl uppercase">UPPERCASE TEXT</div>
+              <div class="text-4xl lowercase">lowercase text</div>
+              <div class="text-4xl capitalize">capitalized text</div>
+              <div class="text-4xl italic">italic emphasis</div>
+              <div class="text-4xl underline decoration-4 underline-offset-8">
+                underlined importance
+              </div>
+              <div class="text-4xl line-through">strikethrough revision</div>
+            </div>
+          </div>
+
+          <!-- Creative Text Effects -->
+          <div class="py-12 border-b border-gray-300">
+            <h3 class="text-2xl mb-8">
+              CREATIVE<span class="text-xs align-super"> EFFECTS</span>
+            </h3>
+            <div class="space-y-12">
+              <div class="text-6xl font-bold text-shadow">TEXT SHADOW</div>
+
+              <div
+                class="text-6xl font-bold hover-text-stroke transition-all duration-300"
+              >
+                HOVER EFFECT
+              </div>
+
+              <div class="text-6xl font-bold text-stroke">OUTLINE TEXT</div>
+
+              <div
+                class="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-400"
+              >
+                GRADIENT TEXT
+              </div>
+
+              <div class="text-6xl font-bold relative">
+                LAYERED TEXT
+                <span class="absolute -top-2 -left-2 text-gray-200 -z-10"
+                  >LAYERED TEXT</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Paragraph Exploration -->
+          <div class="py-12 border-b border-gray-300">
+            <h3 class="text-2xl mb-8">
+              PARA<span class="text-xs align-super">GRAPH</span> STYLES
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h4 class="text-sm uppercase tracking-widest mb-4">
+                  Left Aligned
+                </h4>
+                <p class="text-left">
+                  Typography is the art and technique of arranging type to make
+                  written language legible, readable, and appealing when
+                  displayed. Typography includes the selection of typefaces,
+                  point sizes, line lengths, line spacing, and letter spacing.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-sm uppercase tracking-widest mb-4">
+                  Right Aligned
+                </h4>
+                <p class="text-right">
+                  The arrangement of type involves selecting typefaces, point
+                  sizes, line lengths, line-spacing, and letter-spacing, as well
+                  as adjusting the space between pairs of letters. Typography is
+                  performed by typesetters, compositors, typographers, and
+                  designers.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-sm uppercase tracking-widest mb-4">Centered</h4>
+                <p class="text-center">
+                  In traditional typography, text is composed to create a
+                  readable, coherent, and visually satisfying whole that works
+                  invisibly, without the awareness of the reader. Even
+                  distribution of typeset material, with a minimum of
+                  distractions and anomalies, aims to produce clarity and
+                  transparency.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-sm uppercase tracking-widest mb-4">
+                  Justified
+                </h4>
+                <p class="text-justify">
+                  Typography is the craft of endowing human language with a
+                  durable visual form, and thus with an independent existence.
+                  Its heartwood is calligraphy — the dance, on a tiny stage, of
+                  the living, speaking hand — and its roots reach into living
+                  soil.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Typography -->
+    <section class="py-24 px-8 bg-black text-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-5xl font-bold mb-16">
+          INTER<span class="text-xs align-super">ACTIVE</span>
+        </h2>
+
+        <div class="grid grid-cols-1 gap-16">
+          <!-- Interactive Element 1 -->
+          <div class="group cursor-pointer">
+            <div class="text-7xl font-bold overflow-hidden relative">
+              <div
+                class="transform transition-transform duration-500 group-hover:-translate-y-full"
+              >
+                HOVER
+              </div>
+              <div
+                class="absolute top-full transform transition-transform duration-500 group-hover:-translate-y-full"
+              >
+                EFFECT
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Element 2 -->
+          <div
+            class="group cursor-pointer bg-white text-black p-12 flex items-center justify-center transition-all duration-500 hover:bg-gray-900 hover:text-white"
+          >
+            <div class="text-5xl font-bold">INVERT ON HOVER</div>
+          </div>
+
+          <!-- Interactive Element 3 -->
+          <div class="grid grid-cols-3 gap-4">
+            <div
+              class="border border-white p-8 hover:bg-white hover:text-black transition-all cursor-pointer flex items-center justify-center"
+            >
+              <span class="text-4xl font-bold">A</span>
+            </div>
+            <div
+              class="border border-white p-8 hover:bg-white hover:text-black transition-all cursor-pointer flex items-center justify-center"
+            >
+              <span class="text-4xl font-bold">B</span>
+            </div>
+            <div
+              class="border border-white p-8 hover:bg-white hover:text-black transition-all cursor-pointer flex items-center justify-center"
+            >
+              <span class="text-4xl font-bold">C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="py-24 px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <blockquote
+          class="text-3xl md:text-5xl font-bold italic mb-8 leading-tight"
+        >
+          "Typography is what language looks like."
+        </blockquote>
+        <p class="text-xl text-gray-600">— Ellen Lupton</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-8 border-t border-gray-400 dark:border-gray-600">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div>
+          <a
+            href="https://layogtima.com"
+            target="_blank"
+            class="text-xl font-bold tracking-normal"
+          >
+            AMIT
+          </a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div
+            class="text-xs text-gray-600 dark:text-gray-400 flex items-center gap-2"
+          >
+            <span class="inline-block transform rotate-180 text-lg mb-2"
+              >©</span
+            >
+            <span
+              >Copyleft 2025 -
+              <a
+                href="https://github.com/layogtima/mono"
+                target="_blank"
+                class="underline"
+                >Share, Adapt, Build.</a
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

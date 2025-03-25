@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MONO | Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ["Space Mono", "monospace"],
+            },
+            animation: {
+              "spin-slow": "spin 8s linear infinite",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+      * {
+        font-family: "Space Mono", monospace;
+      }
+
+      .border-grid {
+        background-size: 40px 40px;
+        background-image: linear-gradient(to right, black 1px, transparent 1px),
+          linear-gradient(to bottom, black 1px, transparent 1px);
+      }
+
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+
+      .hover-scale:hover {
+        transform: scale(1.05);
+        z-index: 10;
+      }
+
+      .text-outline {
+        -webkit-text-stroke: 1px black;
+        -webkit-text-fill-color: white;
+      }
+
+      .halftone {
+        background-image: radial-gradient(#000 3px, transparent 3px);
+        background-size: 15px 15px;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-black min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full px-4 py-3 flex justify-between items-center z-50 bg-white border-b border-gray-900"
+    >
+      <a href="index.html" class="text-xl font-bold tracking-normal"
+        >MONO</span></a
+      >
+      <div class="flex gap-6">
+        <a
+          href="typography.html"
+          class="text-sm hover:underline decoration-4 underline-offset-8"
+          >TYPOGRAPHY</a
+        >
+        <a
+          href="layout.html"
+          class="text-sm hover:underline decoration-4 underline-offset-8"
+          >LAYOUT</a
+        >
+        <a
+          href="gallery.html"
+          class="text-sm underline decoration-4 underline-offset-8"
+          >GALLERY</a
+        >
+        <a
+          href="about.html"
+          class="text-sm hover:underline decoration-4 underline-offset-8"
+          >ABOUT</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+      class="h-screen flex flex-col justify-center items-center pt-16 relative overflow-hidden bg-black text-white"
+    >
+      <div class="z-10 px-8 max-w-4xl text-center">
+        <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-none">
+          GALL<span class="text-xs align-super">ERY</span>
+        </h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto">
+          Monochromatic marvels. Design within constraints.
+        </p>
+      </div>
+      <div class="absolute inset-0 halftone opacity-20"></div>
+    </header>
+
+    <!-- Gallery Grid -->
+    <section class="py-24 px-8">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-5xl font-bold mb-16">
+          CURA<span class="text-xs align-super">TED</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+          <!-- Gallery Item 1 -->
+          <div class="relative aspect-square overflow-hidden hover-scale">
+            <div class="absolute inset-0 border-grid opacity-20"></div>
+            <div class="absolute inset-0 flex items-center justify-center p-8">
+              <div class="w-32 h-32 bg-black rounded-full"></div>
+            </div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <h3 class="text-xl font-bold">CIRCLE</h3>
+              <p class="text-sm">Perfection in simplicity.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 2 -->
+          <div class="relative aspect-square overflow-hidden hover-scale">
+            <div class="absolute inset-0 border-grid opacity-20"></div>
+            <div class="absolute inset-0 flex items-center justify-center p-8">
+              <div class="w-32 h-32 border-8 border-black"></div>
+            </div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <h3 class="text-xl font-bold">SQUARE</h3>
+              <p class="text-sm">Balance through equality.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 3 -->
+          <div
+            class="relative aspect-square overflow-hidden hover-scale bg-black text-white"
+          >
+            <div class="absolute inset-0 border-grid opacity-20"></div>
+            <div class="absolute inset-0 flex items-center justify-center p-8">
+              <div class="w-40 h-40 border-8 border-white rounded-full"></div>
+            </div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <h3 class="text-xl font-bold">INVERSION</h3>
+              <p class="text-sm">Contrast creates emphasis.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 4 -->
+          <div class="relative aspect-square overflow-hidden hover-scale">
+            <div class="absolute inset-0 border-grid opacity-20"></div>
+            <div class="absolute inset-0 flex items-center justify-center p-8">
+              <div class="w-40 h-40 bg-black rotate-45"></div>
+            </div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <h3 class="text-xl font-bold">DIAMOND</h3>
+              <p class="text-sm">Transformation through perspective.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 5 -->
+          <div class="relative aspect-square overflow-hidden hover-scale">
+            <div class="absolute inset-0 border-grid opacity-20"></div>
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center p-8"
+            >
+              <div class="mb-4 text-4xl font-bold text-outline">TEXT</div>
+              <div class="text-4xl font-bold">TEXT</div>
+            </div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <h3 class="text-xl font-bold">OVERLAY</h3>
+              <p class="text-sm">Visual depth through layers.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 6 -->
+          <div
+            class="relative aspect-square overflow-hidden hover-scale bg-black text-white"
+          >
+            <div class="absolute inset-0 border-grid opacity-20"></div>
+            <div
+              class="absolute inset-0 flex items-center justify-center p-8 animate-spin-slow"
+            >
+              <div class="w-32 h-32 relative">
+                <div class="absolute w-full h-2 bg-white top-0 left-0"></div>
+                <div class="absolute w-2 h-full bg-white top-0 right-0"></div>
+                <div class="absolute w-full h-2 bg-white bottom-0 left-0"></div>
+                <div class="absolute w-2 h-full bg-white top-0 left-0"></div>
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <h3 class="text-xl font-bold">MOTION</h3>
+              <p class="text-sm">Dynamic storytelling through animation.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 7 -->
+          <div class="relative aspect-square overflow-hidden hover-scale">
+            <div class="absolute inset-0 border-grid opacity-20"></div>
+            <div class="absolute inset-0 grid grid-cols-2 grid-rows-2">
+              <div class="bg-white"></div>
+              <div class="bg-black"></div>
+              <div class="bg-black"></div>
+              <div class="bg-white"></div>
+            </div>
+            <div class="absolute bottom-0 left-0 p-4 text-white">
+              <h3 class="text-xl font-bold">QUARTERS</h3>
+              <p class="text-sm">Division creates harmony.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 8 -->
+          <div class="relative aspect-square overflow-hidden hover-scale">
+            <div class="absolute inset-0 border-grid opacity-20"></div>
+            <div class="absolute inset-0 flex items-center justify-center p-8">
+              <div class="relative">
+                <div class="w-16 h-16 bg-black absolute top-0 left-0"></div>
+                <div
+                  class="w-16 h-16 bg-black absolute top-0 right-0 translate-x-4 -translate-y-4"
+                ></div>
+                <div
+                  class="w-16 h-16 bg-black absolute bottom-0 right-0 translate-x-8 -translate-y-8"
+                ></div>
+                <div
+                  class="w-16 h-16 bg-black absolute bottom-0 left-0 translate-x-12 -translate-y-12"
+                ></div>
+                <div
+                  class="w-16 h-16 bg-black absolute top-0 left-0 translate-x-16 -translate-y-16"
+                ></div>
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <h3 class="text-xl font-bold">CASCADE</h3>
+              <p class="text-sm">Layered repetition creates rhythm.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 9 -->
+          <div
+            class="relative aspect-square overflow-hidden hover-scale bg-black text-white"
+          >
+            <div class="absolute inset-0 border-grid opacity-20"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-9xl font-bold opacity-10">A</div>
+              <div class="text-7xl font-bold absolute">A</div>
+            </div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <h3 class="text-xl font-bold">ECHO</h3>
+              <p class="text-sm">Repetition creates depth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Gallery Items -->
+    <section class="py-24 px-8 bg-black text-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-5xl font-bold mb-16">
+          FEAT<span class="text-xs align-super">URED</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <!-- Featured Item 1 -->
+          <div class="flex flex-col h-96">
+            <div class="flex-1 overflow-hidden relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-36 h-36 rounded-full border-8 border-white"></div>
+              </div>
+            </div>
+            <div class="mt-4">
+              <h3 class="text-2xl font-bold">ORBITAL</h3>
+              <p class="text-lg mt-2">
+                Perfect circles are a universal symbol of unity and wholeness,
+                representing the cyclical nature of time and space.
+              </p>
+              <div class="border-t border-white mt-4 pt-4 flex items-center">
+                <div class="text-sm uppercase tracking-widest flex-1"></div>
+                <div class="text-sm">01</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Item 2 -->
+          <div class="flex flex-col h-96">
+            <div class="flex-1 overflow-hidden relative">
+              <div
+                class="absolute inset-0 grid grid-cols-5 grid-rows-5 gap-2 p-8"
+              >
+                <div class="col-span-1 row-span-1 bg-white"></div>
+                <div class="col-span-1 row-span-1 bg-white"></div>
+                <div class="col-span-1 row-span-1 bg-white"></div>
+                <div class="col-span-1 row-span-1 bg-white"></div>
+                <div class="col-span-1 row-span-1 bg-white"></div>
+                <div class="col-span-1 row-span-1 bg-white"></div>
+                <div class="col-span-3 row-span-3 bg-white"></div>
+                <div class="col-span-1 row-span-1 bg-white"></div>
+                <div class="col-span-1 row-span-1 bg-white"></div>
+                <div class="col-span-1 row-span-1 bg-white"></div>
+                <div class="col-span-1 row-span-1 bg-white"></div>
+                <div class="col-span-1 row-span-1 bg-white"></div>
+                <div class="col-span-1 row-span-1 bg-white"></div>
+                <div class="col-span-1 row-span-1 bg-white"></div>
+              </div>
+            </div>
+            <div class="mt-4">
+              <h3 class="text-2xl font-bold">MODULAR</h3>
+              <p class="text-lg mt-2">
+                Grid-based systems allow for endless combinations of modular
+                design elements, creating infinite possibilities from finite
+                constraints.
+              </p>
+              <div class="border-t border-white mt-4 pt-4 flex items-center">
+                <div class="text-sm uppercase tracking-widest flex-1"></div>
+                <div class="text-sm">02</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Gallery -->
+    <section class="py-24 px-8">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-5xl font-bold mb-16">
+          INTER<span class="text-xs align-super">ACTIVE</span>
+        </h2>
+
+        <div class="grid grid-cols-1 gap-16">
+          <!-- Interactive Element 1 -->
+          <div
+            class="h-64 border-2 border-black relative overflow-hidden group cursor-pointer"
+          >
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div
+                class="text-6xl font-bold transition-all duration-500 group-hover:opacity-0"
+              >
+                HOVER
+              </div>
+              <div
+                class="text-6xl font-bold absolute opacity-0 transition-all duration-500 group-hover:opacity-100"
+              >
+                REVEAL
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Element 2 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div
+              class="h-64 bg-white border-2 border-black p-8 relative overflow-hidden group cursor-pointer"
+            >
+              <div
+                class="absolute inset-0 bg-black transform origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100"
+              ></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div
+                  class="text-4xl font-bold z-10 transition-colors duration-500 group-hover:text-white"
+                >
+                  SLIDE
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="h-64 bg-black text-white border-2 border-white p-8 relative overflow-hidden group cursor-pointer"
+            >
+              <div
+                class="absolute inset-0 bg-white transform origin-right scale-x-0 transition-transform duration-500 group-hover:scale-x-100"
+              ></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div
+                  class="text-4xl font-bold z-10 transition-colors duration-500 group-hover:text-black"
+                >
+                  REVEAL
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="py-24 px-8 bg-black text-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <blockquote class="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+          "Thinking about design is hard, but not thinking about it can be
+          disastrous."
+        </blockquote>
+        <p class="text-xl">— Ralph Caplan</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-8 border-t border-gray-400 dark:border-gray-600">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div>
+          <a
+            href="https://layogtima.com"
+            target="_blank"
+            class="text-xl font-bold tracking-normal"
+          >
+            AMIT
+          </a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div
+            class="text-xs text-gray-600 dark:text-gray-400 flex items-center gap-2"
+          >
+            <span class="inline-block transform rotate-180 text-lg mb-2"
+              >©</span
+            >
+            <span
+              >Copyleft 2025 -
+              <a href="https://github.com/layogtima/mono" target="_blank" class="underline"
+                >Share, Adapt, Build.</a
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
