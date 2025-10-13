@@ -128,6 +128,10 @@ Shreshth's corner of the internet—web development, visualizations, and philoso
 
 A personal guide to growing food in Bengaluru. Proving that even plants, which literally exist to provide color in nature, can be documented in black and white.
 
+### [india.xonotic.au](https://india.xonotic.au/)
+
+A landing page for our small Xonotic community in India, focused on trying to get arena shooter games back in style! `You like Quake/Unreal Tournament? You're in for a treat :)`
+
 ## Contribute
 
 Got MONOCHROME magic to share?
