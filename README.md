@@ -6,15 +6,15 @@
 
 MONO is a stripped-down design system that embraces the power of black, white, and the shades between. It's about removing color as a distraction to focus on what really matters: solid design fundamentals.
 
-Think of it as design on hard mode—if it works in monochrome, it'll work anywhere.
+Think of it as design on hard mode-if it works in monochrome, it'll work anywhere.
 
-> "Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away." — Antoine de Saint-Exupéry
+> "Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away." - Antoine de Saint-Exupéry
 
 ## Core Principles
 
 ### Reduction
 
-Strip away the non-essential. Color, decoration, complexity—gone.
+Strip away the non-essential. Color, decoration, complexity-gone.
 
 ### Refinement
 
@@ -122,7 +122,7 @@ Amit's portfolio showcasing UI/UX design, hardware consulting, and flow artistry
 
 ### [sm0.dev](https://www.sm0.dev/)
 
-Shreshth's corner of the internet—web development, visualizations, and philosophical musings, all without the distraction of color.
+Shreshth's corner of the internet-web development, visualizations, and philosophical musings, all without the distraction of color.
 
 ### [seeds.layogtima.com](https://seeds.layogtima.com/)
 
